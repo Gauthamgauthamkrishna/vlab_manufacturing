@@ -19,7 +19,7 @@ html
 #copyright{
 position: absolute;
 left:50px;
-top: 577px;
+top: 585px;
 font-family: verdana; 
 font-size:12px
 }
@@ -123,21 +123,98 @@ background:#000
 
 /* -------------------------------------- water ---------------------------------------- */
 /* Chrome, Safari, Opera */
-@-webkit-keyframes water-4 {
+
+/* @-webkit-keyframes water-4 {
 0% {-webkit-transform: translate(0, 0 );}
 100% {-webkit-transform: translate(0, -20px );}
 }
 
 /* Standard syntax */
-@keyframes water-4 {
-    0% {transform: translate(0, 0);}
-    100% {transform: translate(0, -20px);}
+@keyframes movePattern {
+    0% {left:50px;top:350px;}
+    20%{left:50px;top:300px;}
+    70%{left:430px;top:300px;}
+	100% {left:430px;top:315px;}
 }
 
-@-webkit-keyframes water-5 {
-0% {-webkit-transform: translate(0, 0 );}
-100% {-webkit-transform: translate(0, -35px );}
+@-webkit-keyframes movePattern{
+    0% {left:50px;top:350px;}
+    20%{left:50px;top:300px;}
+    70%{left:430px;top:300px;}
+	100% {left:430px;top:315px;}
 }
+
+@keyframes moveSand {
+    0% {
+        left:100px;top:220px;
+        transform: rotate(0deg);
+    }
+    50%{
+        left:250px;top:120px;
+        transform: rotate(0deg);
+    }
+    100%{
+        left:250px;top:120px;
+        transform: rotate(80deg);
+    }
+}
+
+@-webkit-keyframes moveSand{
+    0% {
+        left:100px;top:220px;
+        transform: rotate(0deg);
+    }
+    50%{
+        left:250px;top:120px;
+        transform: rotate(0deg);
+    }
+    100%{
+        left:250px;top:120px;
+        transform: rotate(80deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Chrome, Safari, Opera */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Standard syntax */
 @keyframes water-5 {
@@ -290,4 +367,4 @@ background:#000
 {
 	0% {left:450px;top:300px;}
 	100% {left:450px;top:250px;}
-}
+} */

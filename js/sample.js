@@ -46,59 +46,24 @@ function magic() {
         myInt = setInterval(function(){ animatearrow(); }, 500);//calls blinking arrow function
         animateArrowATPosition(160,350,-90);//specify the left top and deg of arrow
         document.getElementById("bucket").onclick = function() {
+            document.getElementById("bucket").onclick = " "//To stop further click on pattern
             myStopFunction();//stops blinking arrow
-            //you have below mentioned bucketMove css, next is durations, 3rd one: repeat value, 4th can be: linear, forwards, ease-in, ease-out can refer w3schools for available options
-            document.getElementById('bucket').style.visibility="hidden";
-	          document.getElementById('bucket1').style.visibility="visible";
-            // document.getElementById("bucket").style.animation = "bucketMove 1.2s 1 linear";//Since it runs for 1.2s
-            //Next you have to write setTimeout function: what to run after 1.2s animation:
-            //setTimeout duration is times*repeat if repeat is > 1
-
-            // setTimeout(function(){
-            //     document.getElementById("bucket").style.visibility = "hidden";
-            //
-                // myInt = setInterval(function(){ animatearrow(); }, 500);
-                // animateArrowATPosition(480,350,-90);//specify the left top and deg of arrow
-
-                // document.getElementById("bucket").onclick = function() {
-                //     myStopFunction();//stops arrow blinking
-
-                    // document.getElementById("bucket").style.animation = "bucketScale 2.5s 2 linear";
-
-                    // setTimeout(function() {
-                    //     document.getElementById("bucket").style.visibility = "visible";
-
-                        // myInt = setInterval(function(){ animatearrow(); }, 500);
-                        // animateArrowATPosition(540,350,-90);//specify the left top and deg of arrow
-
-                        // document.getElementById("bucket").onclick = function() {
-                        //     myStopFunction();
-                        //     document.getElementById("bucket").style.transformOrigin = "0% 50%";
-                        //     document.getElementById("bucket").style.animation = "bucketRotate 1.2s linear"
-                  setTimeout(function() {
-                                document.getElementById("nextButton").style.visibility = "visible";
-                            },250);
-
-
+            document.getElementById("bucket").style.animation = "movePattern 1.2s ease-out forwards ";//Since it runs for 1.2s
+            setTimeout(function() {
+                document.getElementById("nextButton").style.visibility = "visible";
+            },1250);
         }
     } else if(simsubscreennum == 2) {
-      document.getElementById("bucket1").style.visibility = "hidden";
+      document.getElementById("bucket").style.visibility = "hidden";
       myInt = setInterval(function(){ animatearrow(); }, 500);//calls blinking arrow function
       animateArrowATPosition(210,250,-90);//specify the left top and deg of arrow
       document.getElementById("sand").onclick = function() {
-        myStopFunction();//stops blinking arrow
-        document.getElementById('sand').style.visibility="hidden";
-        document.getElementById('sand1').style.visibility="visible";
-        document.getElementById("sand1").style.transformOrigin = "0% 50%";
-        document.getElementById("sand1").style.animation = "bucketRotate 1.2s forwards  "
-
+        document.getElementById("sand").onclick =" "
+        myStopFunction();
+        document.getElementById("sand").style.animation = "moveSand 1.2s ease-out forwards";
         setTimeout(function() {
-                      document.getElementById("nextButton").style.visibility = "visible";
-                  },1250);
-
-        // document.getElementById("nextButton").style.visibility = "hidden";
-        // document.getElementById("scale").style.visibility = "hidden";
-      }    // document.getElementById("rotate").style.visibility = "hidden";
-
+            document.getElementById("nextButton").style.visibility = "visible";
+        },1250);
+      }    
     }
   }
